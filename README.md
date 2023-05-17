@@ -17,3 +17,6 @@ $ http://localhost:3000/
 - An input select that has a list of pokemons as options
 - A card that show a more info of a pokemon after selecting an option in the input select.
 - A modal is open when clicking on a More info button in the pokemon card.
+
+### Note: In case you want to see the completed Pokedex, you can see the Pull Request I created. You can merge it if you would like to.
+PR link: [https://github.com/lightme-fan/pokedex-challenge-yk-robotics/pull/1](https://github.com/lightme-fan/pokedex-challenge-yk-robotics/pull/1)
