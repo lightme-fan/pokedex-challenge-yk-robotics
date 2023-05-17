@@ -1,21 +1,21 @@
 import React from 'react'
-import { Box, Modal } from '@mui/material';
+import { Box, Button, List, ListItem, Modal } from '@mui/material';
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
+  margin: "16px",
   pt: 2,
   px: 4,
   pb: 3,
 };
 
-function PokemonModal({ openModal, handleClose}) {
+function PokemonModal({ openModal, handleClose, pokemon }) {
   return (
     <Modal
       open={openModal}
@@ -24,10 +24,19 @@ function PokemonModal({ openModal, handleClose}) {
       aria-describedby="parent-modal-description"
     >
       <Box sx={{ ...style, width: 400 }}>
-        <h2 id="parent-modal-title">Text in a modal</h2>
-        <p id="parent-modal-description">
-          Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        </p>
+        <h2 id="parent-modal-title">{pokemon.name}</h2>
+        <List>
+          <ListItem>
+            <b>Habitat</b>: {pokemon.habitat}  
+          </ListItem>
+          <ListItem>
+            <b>Growth Rate</b>: {pokemon.growth_rate}
+          </ListItem>
+          <ListItem>
+            <b>Shape</b>: {pokemon.shape}
+          </ListItem>
+        </List>
+        <Button onClick={handleClose}>Close</Button>
       </Box>
     </Modal>
   )

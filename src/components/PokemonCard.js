@@ -8,9 +8,9 @@ import Typography from '@mui/material/Typography';
 
 const PokemonCard = ({ pokemon, onClick }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 240 }}
         image={pokemon.picture}
         title={pokemon.name}
       />
